@@ -33,3 +33,7 @@ Route::get('/user/{name}', function ($name){
 Route::get('/admin/user', function () {
     return view('admin.users');
 });
+
+Route::get('/galery', function () {
+    return view('galery');
+});
