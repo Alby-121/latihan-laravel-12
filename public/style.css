@@ -1,0 +1,131 @@
+/* ==== GLOBAL THEME (Anime UI) ==== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0e1a;
+    color: #fff;
+    overflow-x: hidden;
+
+    /* Background anime bergerak */
+    background-image: url('https://images6.alphacoders.com/133/1334135.png');
+    background-size: cover;
+    background-attachment: fixed;
+    animation: bgMove 30s linear infinite;
+}
+
+/* Background movement */
+@keyframes bgMove {
+    0% { background-position: 0 0; }
+    50% { background-position: 0 50px; }
+    100% { background-position: 0 0; }
+}
+
+/* Glow lighting overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(0,162,255,0.25), transparent 70%);
+    pointer-events: none;
+}
+
+/* ===== NAVBAR (Anime Blue Glow) ===== */
+.navbar {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 183, 255, 0.3);
+    padding: 15px 30px;
+    animation: fadeIn 1s ease;
+}
+
+.navbar-brand, .nav-link {
+    color: #bde8ff !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #00c8ff !important;
+    text-shadow: 0 0 12px #00eaff;
+    transform: translateY(-3px);
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ===== CONTENT CARD (Anime Style Lightbox) ===== */
+.content {
+    max-width: 900px;
+    margin: 70px auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 25px rgba(0, 195, 255, 0.3);
+    border: 1px solid rgba(0, 183, 255, 0.25);
+
+    animation: riseUp 1.2s ease;
+}
+
+/* Slide up anime animation */
+@keyframes riseUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+
+.content:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+    box-shadow: 0 0 35px rgba(0, 195, 255, 0.5);
+}
+
+/* ===== FOOTER ANIME NEON BLUE ===== */
+footer {
+    margin-top: 80px;
+    background: rgba(10, 14, 30, 0.7);
+    text-align: center;
+    padding: 50px 20px;
+    color: #c1e4ff;
+
+    border-top: 1px solid rgba(0, 195, 255, 0.3);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 1.3s ease;
+}
+
+footer .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 18px #00d5ff;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Footer icon anime hover */
+footer .social a {
+    font-size: 26px;
+    margin: 0 12px;
+    color: #63e5ff;
+    text-shadow: 0 0 12px #00eaff;
+    transition: 0.3s;
+}
+
+footer .social a:hover {
+    transform: translateY(-6px) scale(1.25);
+    color: #ffffff;
+    text-shadow: 0 0 25px #00eaff;
+}
+
+/* Copyright text */
+footer .copyright {
+    margin-top: 25px;
+    font-size: 14px;
+    opacity: 0.6;
+}

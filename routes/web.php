@@ -1,14 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
+Route::get('/home', [AuthController::class, 'index']);
+
+route::get('/login', [AuthController::class, 'login']);
+
+route::get('/about', [AuthController::class, 'about']);
+
+route::get('/news', [AuthController::class, 'news']);
 
 Route::get('/about', function () {
     $data = ['laptop', 'Laptop', 'Keyboard'];
@@ -25,7 +34,7 @@ Route::get('/contact', function () {
 // });
 
 // Method 2: with() method
-Route::get('/user/{name}', function ($name){
+Route::get('/user/{name}', function ($name) {
     return view('user')->with('name', $name);
 });
 
