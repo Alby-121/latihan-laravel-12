@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,3 +48,11 @@ Route::get('/admin/user', function () {
 Route::get('/galery', function () {
     return view('galery');
 });
+
+// Formulir pendaftaran
+
+Route::get('/form', [UserController::class, 'index']);
+Route::post('/kirim', [UserController::class, 'proses_tambah']);
+
+// Route Student
+Route::resource('student', StudentController::class);

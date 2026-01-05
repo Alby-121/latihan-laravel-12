@@ -9,8 +9,8 @@ class AuthController extends Controller
     // Halaman Home
     public function index()
     {
-        // return view('home');
-        return 'halo controller';
+        return view('home');
+        // return 'halo controller';
     }
     
     public function login()

@@ -40,7 +40,7 @@ body::before {
 }
 
 .navbar-brand, .nav-link {
-    color: #bde8ff !important;
+    color: #3e449b !important;
     transition: 0.3s;
 }
 
@@ -129,3 +129,18 @@ footer .copyright {
     font-size: 14px;
     opacity: 0.6;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* INI KUNCINYA */
+}
+
